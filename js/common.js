@@ -11,6 +11,9 @@ window.onload = function() {
   let btns_rev = document.getElementsByClassName('reviews-block__btn');
   let modals_rev = document.getElementsByClassName('modal-revievs');
   let modals_rev_over = document.getElementsByClassName('modal-revievs-over');
+  let video_company = document.getElementsByClassName('companies-video-play');
+
+  
 
   for (let i = modals_rev_over.length - 1; i >= 0; i--) {
     modals_rev_over[i].onclick = function() {
@@ -23,6 +26,15 @@ window.onload = function() {
     }
   }
 
+  video_company[0].onclick = function() {
+      let video = document.getElementById('video-ytube');
+      let video_src = video.getAttribute('data-src')
+      video.src = video_src + ';controls=0&amp;showinfo=0&amp;autoplay=1"';
+      console.log(video_src)
+      //$video.attr('src', src + '&autoplay=1');
+      return false;
+    }
+  
   for (let i = phoneMask_arr.length - 1; i >= 0; i--) {
     let phoneMask = IMask(
     phoneMask_arr[i], {

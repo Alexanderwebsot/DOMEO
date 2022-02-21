@@ -154,8 +154,8 @@ window.onload = function() {
     // Optional parameters
     direction: 'horizontal',
     loop: true,
-    slidesPerView: 3.8,
-    spaceBetween: 20,
+    slidesPerView: 4.2,
+    spaceBetween: 0,
     centeredSlides: true,
     centeredSlidesBounds: true,
     speed: 600,
@@ -170,6 +170,7 @@ window.onload = function() {
     centeredSlidesBounds: true,
     speed: 600,
     spaceBetween: 60,
+    slideToClickedSlide: true,
     navigation: {
       nextEl: '.porfolio-arrow_r',
       prevEl: '.porfolio-arrow_l',

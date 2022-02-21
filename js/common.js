@@ -15,7 +15,40 @@ window.onload = function() {
   let btns_portfolio = document.getElementsByClassName('porfolio-slide__play');
   let video_potfolio = document.getElementsByClassName('porfolio-slide-video');
   let slid_potfolio = document.getElementsByClassName('porfolio-slide');
+  let video_scroll = document.getElementById('transparency');
+  let transparency_video = document.getElementById('transparency_video');
+  let excursion_btn = document.getElementById('excursion-btn');
+  let modal_excursion = document.getElementById('modal-excursion');
+
+  excursion_btn.onclick = function() {
+      modal_excursion.classList.add('modal-window-active');
+      modal_dark.classList.add('dark-window-active');
+
+      return false;
+  }
+
+  function offset(el) {
+      var rect = el.getBoundingClientRect(),
+      scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+      scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      let scroll_video = rect.top + scrollTop;
+      video_scroll = scroll_video
+      
+  }
+
+  let AlreadyDone = false;
+  let scrolllength = offset(video_scroll); 
   
+  window.addEventListener('scroll', function() {
+    
+    if (!AlreadyDone && pageYOffset > video_scroll){ 
+      let video_src = transparency_video.getAttribute('data-src')
+      transparency_video.src = video_src;
+      AlreadyDone = true; 
+    }
+  })
+
+
   for (let i = btns_portfolio.length - 1; i >= 0; i--) {
     btns_portfolio[i].onclick = function() {
 

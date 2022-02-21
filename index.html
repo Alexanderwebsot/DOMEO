@@ -18,7 +18,7 @@
 	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-
+<div class="dark-window" id="modal-dark"></div>
 <nav class="nav">
 	<div class="container">
 		<div class="nav-row">
@@ -306,7 +306,7 @@
 		</div>
 	</div>
 </section>
-<section class="transparency">
+<section class="transparency" id="transparency">
 	<div class="container">
 		<h2 class="section-title">
 			Полная прозрачность в партнерстве
@@ -352,7 +352,7 @@
 				</div>
 			</div>
 			<div class="transparency-img">
-				<iframe data-src="https://www.youtube.com/embed/TWHm282xs-k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<iframe id="transparency_video" data-src="https://www.ytube.com/embed/XAJvWjfCQ-M?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			</div>
 		</div>
 		<a href="#" class="benefits-block-btn btn">
@@ -975,7 +975,7 @@
 						<br>
 						Но вы можете приехать и
 					</p>
-					<a href="#" class="connection-btn">
+					<a href="#" class="connection-btn" id="excursion-btn">
 						Посмотреть как мы работаем
 					</a>
 				</div>
@@ -1376,7 +1376,7 @@
 	</div>
 </footer>
 
-<div class="dark-window" id="modal-dark"></div>
+
 <div class="modal-window" id="modal-callback">
 	<div class="modal-window-close">
 		<picture>
@@ -1414,6 +1414,30 @@
 	<p class="modal-window__text">
 		Для регистрации отправьте заявку <br>
 		и наш менеджер перезвонит вам в течение 15 минут 
+	</p>
+	<form action="#" class="footer-form__wrapper">
+		<input required type="text" class="footer-form__input phone" placeholder="+7 (915) 555 55 55">
+		<button class="footer-form__btn">
+			Отправить заявку
+		</button>
+		<p class="footer-form__politic">
+			Нажимая на кнопку, вы подтверждаете, что ознакомились<br> и согласны с <a href="https://disk.yandex.ru/i/jx7-jJX8FsyjKQ" target="_blank" class="hover-color">политикой конфиденциальности</a>
+		</p>
+	</form>
+</div>
+<div class="modal-window" id="modal-excursion">
+	<div class="modal-window-close">
+		<picture>
+			<source srcset="img/close.png">
+		    <img src="img/close.png" alt="">
+		</picture>
+	</div>
+	<h2 class="modal-window__title">
+		Экскурсия по офису
+	</h2>
+	<p class="modal-window__text">
+		Для записи на экскурсию отправьте заявк <br>
+		менеджер перезвонит вам в течение 5 минут
 	</p>
 	<form action="#" class="footer-form__wrapper">
 		<input required type="text" class="footer-form__input phone" placeholder="+7 (915) 555 55 55">

@@ -12,8 +12,25 @@ window.onload = function() {
   let modals_rev = document.getElementsByClassName('modal-revievs');
   let modals_rev_over = document.getElementsByClassName('modal-revievs-over');
   let video_company = document.getElementsByClassName('companies-video-play');
-
+  let btns_portfolio = document.getElementsByClassName('porfolio-slide__play');
+  let video_potfolio = document.getElementsByClassName('porfolio-slide-video');
+  let slid_potfolio = document.getElementsByClassName('porfolio-slide');
   
+  for (let i = btns_portfolio.length - 1; i >= 0; i--) {
+    btns_portfolio[i].onclick = function() {
+
+        let parent_video = this.parentNode;
+        let video = parent_video.querySelector('.porfolio-slide-video');
+        
+        parent_video.classList.add('porfolio-slide-select');
+
+        let video_src = video.getAttribute('data-src')
+
+        video.src = video_src;
+
+        return false;
+    }
+  }
 
   for (let i = modals_rev_over.length - 1; i >= 0; i--) {
     modals_rev_over[i].onclick = function() {
@@ -32,7 +49,7 @@ window.onload = function() {
       let video_wrapper = document.getElementById('video-comapany');
       video_wrapper.classList.add('companies-active');
       video.src = video_src;
-      console.log(video_src)
+      
       //$video.attr('src', src + '&autoplay=1');
       return false;
     }
@@ -100,7 +117,7 @@ window.onload = function() {
       return false;
   }
 
-  new Swiper('.gallery-slider', {
+  let gallery_slider  = new Swiper('.gallery-slider', {
     // Optional parameters
     direction: 'horizontal',
     loop: true,
@@ -111,7 +128,7 @@ window.onload = function() {
     speed: 600,
   });
 
-  new Swiper('.porfolio-slider', {
+  let portfolio_slider =  new Swiper('.porfolio-slider', {
     // Optional parameters
     direction: 'horizontal',
     loop: true,
@@ -124,5 +141,14 @@ window.onload = function() {
       nextEl: '.porfolio-arrow_r',
       prevEl: '.porfolio-arrow_l',
     },
+  });
+
+  portfolio_slider.on('slideChange', function () {
+   for (let i = video_potfolio.length - 1; i >= 0; i--) {
+     video_potfolio[i].src = '';
+   }
+   for (let i2 = slid_potfolio.length - 1; i2 >= 0; i2--) {
+     slid_potfolio[i2].classList.remove('porfolio-slide-select');
+   }
   });
 }

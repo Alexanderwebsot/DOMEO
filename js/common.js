@@ -29,7 +29,9 @@ window.onload = function() {
   video_company[0].onclick = function() {
       let video = document.getElementById('video-ytube');
       let video_src = video.getAttribute('data-src')
-      video.src = video_src + ';controls=0&amp;showinfo=0&amp;autoplay=1"';
+      let video_wrapper = document.getElementById('video-comapany');
+      video_wrapper.classList.add('companies-active');
+      video.src = video_src;
       console.log(video_src)
       //$video.attr('src', src + '&autoplay=1');
       return false;

@@ -10,7 +10,18 @@ window.onload = function() {
   let html_el = document.getElementById('html-over');
   let btns_rev = document.getElementsByClassName('reviews-block__btn');
   let modals_rev = document.getElementsByClassName('modal-revievs');
+  let modals_rev_over = document.getElementsByClassName('modal-revievs-over');
 
+  for (let i = modals_rev_over.length - 1; i >= 0; i--) {
+    modals_rev_over[i].onclick = function() {
+        for (let i = modals.length - 1; i >= 0; i--) {
+          modals[i].classList.remove('modal-window-active');
+        }
+        html_el.classList.remove('overflow');
+        modal_dark.classList.remove('dark-window-active');
+        return false;
+    }
+  }
 
   for (let i = phoneMask_arr.length - 1; i >= 0; i--) {
     let phoneMask = IMask(
@@ -75,19 +86,18 @@ window.onload = function() {
       return false;
   }
 
-  const swiper = new Swiper('.swiper', {
-      // Optional parameters
-      direction: 'horizontal',
-      loop: true,
-      slidesPerView: 3.8,
-      spaceBetween: 20,
-      centeredSlides: true,
-      centeredSlidesBounds: true,
-      speed: 600,
-      
-    });
+  new Swiper('.gallery-slider', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+    slidesPerView: 3.8,
+    spaceBetween: 20,
+    centeredSlides: true,
+    centeredSlidesBounds: true,
+    speed: 600,
+  });
 
-  const swiper2 = new Swiper('.porfolio-slider', {
+  new Swiper('.porfolio-slider', {
     // Optional parameters
     direction: 'horizontal',
     loop: true,
@@ -96,5 +106,9 @@ window.onload = function() {
     centeredSlidesBounds: true,
     speed: 600,
     spaceBetween: 60,
+    navigation: {
+      nextEl: '.porfolio-arrow_r',
+      prevEl: '.porfolio-arrow_l',
+    },
   });
 }

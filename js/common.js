@@ -159,6 +159,9 @@ window.onload = function() {
     centeredSlides: true,
     centeredSlidesBounds: true,
     speed: 600,
+    autoplay: {
+       delay: 1000,
+     },
   });
 
   let portfolio_slider =  new Swiper('.porfolio-slider', {

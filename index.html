@@ -13,7 +13,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;500;600&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/libs.min.css">
 
-	<link rel="stylesheet" href="https://npkg.com/swiper@8/swiper-bundle.min.css"/>
+	<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
 	<!-- main css -->
 	<link rel="stylesheet" href="css/main.css">
 </head>
@@ -593,7 +593,8 @@
 				</p>
 				<div class="partners-block-img">
 					<picture>
-						<source srcset="img/registratsia_domeo.png">
+						<source srcset="img/partners-1-tab.jpg" media="(max-width: 1200px)">
+						<source srcset="img/registratsia_domeo.png" media="(min-width: 1200px)">
 					    <img src="img/approach-1.png" alt="">
 					</picture>
 				</div>
@@ -609,7 +610,8 @@
 				</p>
 				<div class="partners-block-img">
 					<picture>
-						<source srcset="img/Group_2801.png">
+						<source srcset="img/partners-2-tab.jpg" media="(max-width: 1200px)">
+						<source srcset="img/Group_2801.png" media="(min-width: 1200px)">
 					    <img src="img/approach-1.png" alt="">
 					</picture>
 				</div>
@@ -623,7 +625,8 @@
 				</p>
 				<div class="partners-block-img">
 					<picture>
-						<source srcset="img/dobavlenie_klienta.png">
+						<source srcset="img/partners-3-tab.png" media="(max-width: 1200px)">
+						<source srcset="img/dobavlenie_klienta.png" media="(min-width: 1200px)">
 					    <img src="img/approach-1.png" alt="">
 					</picture>
 				</div>
@@ -637,7 +640,8 @@
 				</p>
 				<div class="partners-block-img">
 					<picture>
-						<source srcset="img/lichny_kabinet.png">
+						<source srcset="img/partners-4-tab.png" media="(max-width: 1200px)">
+						<source srcset="img/lichny_kabinet.png" media="(min-width: 1200px)">
 					    <img src="img/approach-1.png" alt="">
 					</picture>
 				</div>
@@ -651,7 +655,8 @@
 				</p>
 				<div class="partners-block-img">
 					<picture>
-						<source srcset="img/vyplacheno_1.png">
+						<source srcset="img/partners-5-tab.png" media="(max-width: 1200px)">
+						<source srcset="img/vyplacheno_1.png" media="(min-width: 1200px)">
 					    <img src="img/approach-1.png" alt="">
 					</picture>
 				</div>
@@ -887,7 +892,7 @@
 					<span>25</span> лидирующих застройщиков Москвы - наши партнеры
 				</li>
 			</ul>
-			<div class="companies-video " id="video-comapany">
+			<div class="companies-video" id="video-comapany">
 				<iframe data-src="https://www.youtube.com/embed/XAJvWjfCQ-M?autoplay=1" title="YouTube video player" frameborder="0" id="video-ytube" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
 				<div class="companies-video__plank">
 					<picture>
@@ -1016,7 +1021,8 @@
 					мастеров под эгидой World Skills Russia
 				</p>
 				<picture class="guarantee-block__img">
-					<source srcset="img/guarantee(3).png">
+					<source srcset="img/guarantee-tablet(1).png" media="(max-width: 1200px)">
+					<source srcset="img/guarantee(3).png" media="(min-width: 1200px)">
 				    <img src="img/guarantee(3).png" alt="">
 				</picture>
 			</div>
@@ -1029,7 +1035,8 @@
 					компетенциям, опыту работы и проф.образованию
 				</p>
 				<picture class="guarantee-block__img">
-					<source srcset="img/guarantee(2).png">
+					<source srcset="img/guarantee-tablet(2).png" media="(max-width: 1200px)">
+					<source srcset="img/guarantee(2).png" media="(min-width: 1200px)">
 				    <img src="img/guarantee(2).png" alt="">
 				</picture>
 			</div>
@@ -1042,7 +1049,8 @@
 					Сбер.Домклик, ВТБ м2, MR Group и др.
 				</p>
 				<picture class="guarantee-block__img">
-					<source srcset="img/guarantee(4).png">
+					<source srcset="img/guarantee-tablet(3).png" media="(max-width: 1200px)">
+					<source srcset="img/guarantee(4).png" media="(min-width: 1200px)">
 				    <img src="img/guarantee(4).png" alt="">
 				</picture>
 			</div>
@@ -1055,7 +1063,8 @@
 					Knauf, Rehau, Tikkurila и др.
 				</p>
 				<picture class="guarantee-block__img">
-					<source srcset="img/guarantee(1).png">
+					<source srcset="img/guarantee-tablet(4).png" media="(max-width: 1200px)">
+					<source srcset="img/guarantee(1).png" media="(min-width: 1200px)">
 				    <img src="img/guarantee(1).png" alt="">
 				</picture>
 			</div>
@@ -1069,7 +1078,8 @@
 						которые сейчас в работе
 					</p>
 					<picture class="guarantee-block__img">
-						<source srcset="img/guarantee(5).png">
+						<source srcset="img/guarantee-tablet(5).png" media="(max-width: 1200px)">
+						<source srcset="img/guarantee(5).png" media="(min-width: 1200px)">
 				    	<img src="img/guarantee(5).png" alt="">
 					</picture>
 				</div>
@@ -1369,7 +1379,6 @@
 		</div>
 	</div>
 </section>
-
 <section class="confidence">
 	<div class="container">
 		<h2 class="section-title">
@@ -1602,12 +1611,10 @@
 	</div>
 </footer>
 
-
-
 <!-- libs js -->
 <script src="js/libs.min.js"></script>
-<script src="https://npkg.com/imask"></script>
-<script src="https://npkg.com/swiper@8/swiper-bundle.min.js"></script>
+<script src="https://unpkg.com/imask"></script>
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 
 <script src="js/common.js"></script>
 </body>

@@ -1,4 +1,22 @@
 window.onload = function() {
+  let portfolio_slider =  new Swiper('.porfolio-slider', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+    slidesPerView: 3,
+    centeredSlides: true,
+    centeredSlidesBounds: true,
+    speed: 600,
+    spaceBetween: 60,
+    slideToClickedSlide: true,
+    navigation: {
+      nextEl: '.porfolio-arrow_r',
+      prevEl: '.porfolio-arrow_l',
+    },
+  });
+
+
+  
   let phoneMask_arr = document.getElementsByClassName('phone');
   let footer_call = document.getElementById('footer-callback')
   let modal_callback = document.getElementById('modal-callback')
@@ -160,25 +178,11 @@ window.onload = function() {
     centeredSlidesBounds: true,
     speed: 600,
     autoplay: {
-       delay: 1000,
+       delay: 2000,
      },
   });
 
-  let portfolio_slider =  new Swiper('.porfolio-slider', {
-    // Optional parameters
-    direction: 'horizontal',
-    loop: true,
-    slidesPerView: 3,
-    centeredSlides: true,
-    centeredSlidesBounds: true,
-    speed: 600,
-    spaceBetween: 60,
-    slideToClickedSlide: true,
-    navigation: {
-      nextEl: '.porfolio-arrow_r',
-      prevEl: '.porfolio-arrow_l',
-    },
-  });
+  
 
   portfolio_slider.on('slideChange', function () {
    for (let i = video_potfolio.length - 1; i >= 0; i--) {

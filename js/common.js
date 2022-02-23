@@ -3,12 +3,18 @@ window.onload = function() {
     // Optional parameters
     direction: 'horizontal',
     loop: true,
-    slidesPerView: 3,
+    slidesPerView: 2.3,
     centeredSlides: true,
     centeredSlidesBounds: true,
     speed: 600,
-    spaceBetween: 60,
+    spaceBetween: 40,
     slideToClickedSlide: true,
+    breakpoints: {
+        960: {
+            slidesPerView: 3,
+            spaceBetween: 60,
+        },
+    },
     navigation: {
       nextEl: '.porfolio-arrow_r',
       prevEl: '.porfolio-arrow_l',
@@ -177,13 +183,14 @@ window.onload = function() {
     centeredSlides: true,
     centeredSlidesBounds: true,
     speed: 600,
+    slideToClickedSlide: true,
     autoplay: {
        delay: 2000,
      },
   });
 
   
-
+  refreshFsLightbox();
   portfolio_slider.on('slideChange', function () {
    for (let i = video_potfolio.length - 1; i >= 0; i--) {
      video_potfolio[i].src = '';
